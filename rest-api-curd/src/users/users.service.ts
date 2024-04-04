@@ -22,11 +22,16 @@ export class UsersService {
     }
 
     async create(user: User) : Promise<void>{
-        this.usersRepository.create(user);
+        try{
+            await   this.usersRepository.save(user);
+        }catch(e){
+            console.log(e)
+        }
+        
     }
 
     async update(id: number, user: User) : Promise<void>{
-        this.usersRepository.update(id,user);
+        await this.usersRepository.update(id,user);
     }
     
     async delete(id:number) : Promise<void>{

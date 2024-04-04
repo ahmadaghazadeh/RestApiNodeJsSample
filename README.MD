@@ -13,4 +13,8 @@ nest g controller users
 
 nest g service users
 
+npm install @nestjs/swagger swagger-ui-express
+
+<http://localhost:3000/api-docs>
+
 '''
