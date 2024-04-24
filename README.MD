@@ -4,6 +4,11 @@ nest new rest-api-curd
 
 npm i pg typeorm @nestjs/typeorm @nestjs/config
 
+ npm install ts-node --save-dev
+ npm i -g typeorm
+
+typeorm migration:create apps/auth/src/db/migraions/initDatabase
+
 nest g module users
 
 nest g controller users
@@ -13,6 +18,8 @@ nest g service users
 npm install @nestjs/swagger swagger-ui-express
 
 http://localhost:3000/api-docs
+
+migration:generate 
 
  
 ## Description
