@@ -4,6 +4,8 @@ nest new rest-api-curd
 
 npm i pg typeorm @nestjs/typeorm @nestjs/config
 
+typeorm migration:generate init-auth.migration -d .\src\ormconfig.js
+
  npm install ts-node --save-dev
  npm i -g typeorm
 
